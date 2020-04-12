@@ -16,7 +16,7 @@ exports.handler = async (event) => {
                 const client = require('twilio')(accountSid, authToken);
     
                 client.messages
-                    .create({ from: 'whatsapp:', body: quoteResponse.contents.quotes[0].quote, to: 'whatsapp:' })
+                    .create({ from: 'whatsapp:', body: quoteResponse.contents.quotes[0].quote, to: 'whatsapp: ' })
                     .then(message => console.log(message.sid));
             });
         });
